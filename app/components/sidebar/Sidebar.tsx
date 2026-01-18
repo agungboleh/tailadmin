@@ -27,7 +27,7 @@ export default function Sidebar({ isExpanded, setIsHovered }: SidebarProps) {
             )}
           </Link>
         </div>
-        <MenuSidebar />
+        <MenuSidebar isCollapsed={!isExpanded} />
       </aside>
     </div>
   )
