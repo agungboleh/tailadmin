@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface ItemMenuProps {
+interface MenuSingleProps {
     icon: React.ReactNode;
     label: string;
     textColor?: string;
@@ -10,36 +10,37 @@ interface ItemMenuProps {
     badge?: string;
 }
 
-export default function ItemMenu({
+export default function MenuSingle({
     icon,
     label,
     textColor = "text-gray-700 dark:text-gray-200",
     collapsed = false,
     href = "#",
     badge,
-}: ItemMenuProps) {
+}: MenuSingleProps) {
     const pathname = usePathname();
     const isActive = pathname === href;
 
     return (
         <Link
             href={href}
-            className={`flex items-center py-2 rounded-md transition-colors
+            className={`relative flex items-center py-2 rounded-md transition-colors
         ${collapsed ? "justify-center px-0" : "gap-3 px-3"}
         ${isActive
                     ? "bg-blue-100 dark:bg-blue-500/10 text-blue-500 dark:text-blue-400 font-semibold"
                     : `${textColor} hover:bg-gray-200 dark:hover:bg-gray-800`
                 }`}>
             {icon}
-            <div className="flex justify-between w-full">
-                {!collapsed && <span>{label}</span>}
-            {!collapsed && badge && (
-                <span className="ml-auto bg-green-100 text-green-500 text-xs px-2 py-1 rounded-full">
-                    {badge}
-                </span>
+            {!collapsed && (
+                <>
+                    <span>{label}</span>
+                    {badge && (
+                        <span className="ml-auto absolute right-10  border border-green-300 bg-green-100 text-green-500 text-xs px-2 py-0.5 rounded-full">
+                            {badge}
+                        </span>
+                    )}
+                </>
             )}
-            </div>
-            
         </Link>
     );
 }
