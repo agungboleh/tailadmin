@@ -7,7 +7,7 @@ interface MenuDropdownProps {
     label: string;
     isOpen: boolean;
     onClick: () => void;
-    subItems: { label: string; href: string; subBadge: string }[];
+    subItems: { label: string; href: string; subBadge?: string }[];
     badge?: string;
     collapsed?: boolean;
 }
@@ -29,10 +29,10 @@ export default function MenuDropdown({
             <button
                 onClick={onClick}
                 className={`relative w-full flex items-center py-2.5 rounded-lg transition-colors
-          ${collapsed ? "justify-center px-0" : "justify-between px-3"}
+          ${collapsed ? "justify-center px-3" : "justify-between px-3"}
           ${isParentActive
-                        ? "bg-blue-50 dark:bg-white text-blue-500 dark:text-brand-light font-semibold"
-                        : "text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800"
+                        ? "bg-blue-50 dark:bg-blue-500/10 text-blue-500 dark:text-blue-400 font-semibold"
+                        : "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5"
                     } `} >
                 <div className="flex items-center gap-3">
                     {icon}
@@ -61,8 +61,8 @@ export default function MenuDropdown({
                                 href={sub.href}
                                 className={`block px-2 py-2 rounded-md text-sm transition
                                     ${isActive
-                                        ? "bg-blue-50 dark:bg-white text-blue-500 dark:text-brand-light font-semibold"
-                                        : "text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-neutral-800"
+                                        ? "bg-blue-50 dark:bg-blue-500/10 text-blue-500 dark:text-blue-400 font-semibold"
+                                        : "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-white/5"
                                     }`}>
                                 <div className="flex justify-between">
                                     {sub.label}

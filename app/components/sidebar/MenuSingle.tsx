@@ -11,7 +11,7 @@ interface MenuSingleProps {
 }
 
 export default function MenuSingle({
-    icon,
+    icon ,
     label,
     textColor = "text-gray-700 dark:text-gray-200",
     collapsed = false,
@@ -22,13 +22,14 @@ export default function MenuSingle({
     const isActive = pathname === href;
 
     return (
+        
         <Link
             href={href}
             className={`relative flex items-center py-2 rounded-md transition-colors
-        ${collapsed ? "justify-center px-0" : "gap-3 px-3"}
+        ${collapsed ? "justify-center px-3" : "gap-3 px-3"}
         ${isActive
                     ? "bg-blue-100 dark:bg-blue-500/10 text-blue-500 dark:text-blue-400 font-semibold"
-                    : `${textColor} hover:bg-gray-200 dark:hover:bg-gray-800`
+                    : `${textColor} hover:bg-gray-100 dark:hover:bg-white/5`
                 }`}>
             {icon}
             {!collapsed && (

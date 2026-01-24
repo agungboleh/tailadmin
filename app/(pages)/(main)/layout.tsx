@@ -10,8 +10,9 @@ export default function MainLayout({ children,
   children: React.ReactNode;
 }) {
 
-  const [collapsed, setCollapsed] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   const isExpanded = !collapsed || isHovered;
 
@@ -24,13 +25,16 @@ export default function MainLayout({ children,
       <Sidebar
         isExpanded={isExpanded}
         setIsHovered={setIsHovered}
+        isMobileOpen={isMobileOpen}
       />
       <div className="flex flex-col flex-1">
         <Navbar
           toggleSidebar={toggleSidebar}
           isExpanded={isExpanded}
+          toggleSidebarMobile={() => setIsMobileOpen(prev => !prev)}
+          isMobileOpen={isMobileOpen}
         />
-        <main className={`p-6 ${isExpanded ? "lg:ml-72.5" : "lg:ml-22.5"}`}>
+        <main className={`p-6 ${isExpanded ? "xl:ml-72.5" : "xl:ml-22.5"}`}>
           {children}
         </main>
         <Footer isExpanded={isExpanded} />

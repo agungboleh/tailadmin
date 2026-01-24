@@ -59,7 +59,7 @@ export default function SigninPage() {
                 </label>
                 <Link
                   className="text-sm text-blue-500 hover:text-blue-700 font-bold"
-                  href="/forgotpassword"
+                  href="/reset-password"
                   data-discover="true"
                 >
                   Forgot password?
