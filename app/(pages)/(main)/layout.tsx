@@ -12,7 +12,7 @@ export default function MainLayout({ children,
 
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [collapsed, setCollapsed] = useState(true);
+  const [collapsed, setCollapsed] = useState(false);
 
   const isExpanded = !collapsed || isHovered;
 

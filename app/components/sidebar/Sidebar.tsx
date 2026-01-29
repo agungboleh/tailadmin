@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import SidebarMenu from "./SidebarMenu";
 
 interface SidebarProps {
@@ -20,7 +20,7 @@ export default function Sidebar({
         onMouseEnter={() => !isMobileOpen && setIsHovered(true)}
         onMouseLeave={() => !isMobileOpen && setIsHovered(false)}
         className={`
-          fixed top-0 left-0 z-10
+          fixed top-0 left-0 z-20
           flex flex-col h-screen
           bg-white dark:bg-gray-900
           text-gray-900 dark:border-gray-800
@@ -46,6 +46,9 @@ export default function Sidebar({
         </div>
         <SidebarMenu isCollapsed={!isExpanded} />
       </aside>
+      {isMobileOpen && (
+        <div className="fixed inset-0 z-10 bg-gray-900/80 xl:hidden"></div>
+      )}
     </div>
   )
 }
