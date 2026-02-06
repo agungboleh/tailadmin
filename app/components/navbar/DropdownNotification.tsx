@@ -16,7 +16,6 @@ interface NotificationItem {
 interface DropdownNotificationProps {
     isOpen: boolean;
     onClose: () => void;
-    className?: string;
 }
 
 const notifications: NotificationItem[] = [
@@ -57,12 +56,11 @@ const notifications: NotificationItem[] = [
 export default function DropdownNotification({
     isOpen,
     onClose,
-    className = "",
 }: DropdownNotificationProps) {
     if (!isOpen) return null;
 
     return (
-        <div className={`absolute right-0 top-15 w-90 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg z-50 ${className}`}>
+        <div className="absolute -right-64 xl:right-0 top-14 w-90 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-lg z-50">
             <div className="flex items-center justify-between mx-5 py-3 border-b border-gray-200 dark:border-gray-700">
                 <span className="font-semibold text-gray-800 dark:text-gray-200">
                     Notification

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function CloseClickOut(onClose: () => void) {
+export function useCloseClickOut(onClose: () => void) {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
