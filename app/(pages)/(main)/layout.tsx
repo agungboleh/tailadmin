@@ -26,6 +26,7 @@ export default function MainLayout({ children,
         isExpanded={isExpanded}
         setIsHovered={setIsHovered}
         isMobileOpen={isMobileOpen}
+        setIsMobileOpen={setIsMobileOpen}
       />
       <div className="flex flex-col flex-1">
         <Navbar
@@ -34,7 +35,7 @@ export default function MainLayout({ children,
           toggleSidebarMobile={() => setIsMobileOpen(prev => !prev)}
           isMobileOpen={isMobileOpen}
         />
-        <main className={`p-6 ${isExpanded ? "xl:ml-72.5" : "xl:ml-22.5"}`}>
+        <main className={`p-6 bg-gray-50 dark:bg-gray-900 ${isExpanded ? "xl:ml-72.5" : "xl:ml-22.5"}`}>
           {children}
         </main>
         <Footer isExpanded={isExpanded} />

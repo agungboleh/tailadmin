@@ -24,7 +24,7 @@ export default function SidebarMenu({ isCollapsed }: SidebarMenuProps) {
                             onClick={() => dropdownMenu("Dashboard")}
                             collapsed={isCollapsed}
                             subItems={[
-                                { label: "Ecommerce", href: "/dashboard" },
+                                { label: "Ecommerce", href: "/ecommerce" },
                                 { label: "Analytics", href: "/analytics" },
                                 { label: "Marketing", href: "/marketing" },
                                 { label: "CRM", href: "/crm" },

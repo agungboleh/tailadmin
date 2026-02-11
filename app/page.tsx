@@ -8,7 +8,7 @@ export default function HomePage() {
   useEffect(() => {
     const isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn) {
-      router.push("/dashboard");
+      router.push("/ecommerce");
     } else {
       router.push("/signin");
     }

@@ -1,0 +1,7 @@
+export default function SaasPage() {
+  return (
+    <section className="h-screen flex flex-col items-center justify-center bg-gray-600 text-white rounded-xl">
+      <h1 className="text-3xl font-bold">SaaS Dashboard</h1>
+    </section>
+  );
+}
