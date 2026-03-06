@@ -20,7 +20,7 @@ export default function CardsIconType1({ icon, title, value, percentage, trend, 
     const { icon: trendIcon, className } = trendConfig[trend];
 
     return (
-        <div className="border rounded-xl p-6 border-gray-300 dark:border-gray-700 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">
+        <div className="border rounded-xl p-6 border-gray-200 dark:border-gray-700 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">
             <div className="flex justify-start">
                 <div className="flex items-center justify-center bg-gray-100 dark:bg-white/5 p-3.5 rounded-xl">{icon}</div>
             </div>

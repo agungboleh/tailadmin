@@ -35,9 +35,16 @@ body {
 }
 
 .no-scrollbar {
-  -ms-overflow-style: none;     
-  scrollbar-width: none;       
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .no-scrollbar::-webkit-scrollbar {
-  display: none;                
+  display: none;
+}
+.jvectormap-tip {
+  background: #2b7fff !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
 }
