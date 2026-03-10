@@ -1,10 +1,10 @@
-import ActionButton from "@/app/components/buttons/Action";
 import CardsChartType1 from "@/app/components/cards/charts/ChartsType-1";
-import CardsChartType2 from "@/app/components/cards/charts/chartsType-2";
-import CardsChartType3 from "@/app/components/cards/charts/chartsType-3";
+import CardsChartType2 from "@/app/components/cards/charts/ChartsType-2";
+import CardsChartType3 from "@/app/components/cards/charts/ChartsType-3";
 import CardsIconType1 from "@/app/components/cards/icons/IconsType-1";
 import { BsBoxSeam, BsPeople } from "react-icons/bs";
-import MapsIconType1 from "@/app/components/cards/maps/mapsType-1";
+import MapsIconType1 from "@/app/components/cards/maps/MapsType-1";
+import CardsTablesType1 from "@/app/components/cards/tables/TablesType-1";
 
 export default function EcommercePage() {
   return (
@@ -27,19 +27,7 @@ export default function EcommercePage() {
           <MapsIconType1 />
         </div>
         <div className="xl:col-span-8 col-span-14">
-          <div className="rounded-xl border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-white/3">
-            <div className="rounded-xl p-6 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">
-              <div className="flex justify-between">
-                <p className="font-semibold text-lg">Recent Orders</p>
-                <div className="flex">
-                  <ActionButton />
-                  <ActionButton />
-                </div>
-              </div>
-              <div className="relative">
-              </div>
-            </div>
-          </div>
+          <CardsTablesType1 />
         </div>
       </div>
     </section>

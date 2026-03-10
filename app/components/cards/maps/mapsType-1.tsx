@@ -21,7 +21,7 @@ export default function MapsIconType1() {
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="items-center w-full rounded-full max-w-8">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/197/197374.png" alt="usa" />
+                                    <img src="https://react-demo.tailadmin.com/images/country/country-01.svg" alt="usa" />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-700 text-sm dark:text-white/90">
@@ -37,7 +37,7 @@ export default function MapsIconType1() {
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="items-center w-full rounded-full max-w-8">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/197/197560.png" alt="france" />
+                                    <img src="https://react-demo.tailadmin.com/images/country/country-02.svg" alt="france" />
                                 </div>
                                 <div>
                                     <p className="font-semibold text-gray-700 text-sm dark:text-white/90">
