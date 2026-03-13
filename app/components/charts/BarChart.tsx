@@ -11,11 +11,13 @@ const Chart = dynamic(() => import("react-apexcharts"), {
 interface BarChartProps {
   categories: string[];
   data: number[];
+  height?: number;
 }
 
 export default function BarChart({
   categories,
   data,
+  height = 300,
 }: BarChartProps) {
   const [isDark, setIsDark] = useState(false);
 
@@ -58,7 +60,7 @@ export default function BarChart({
         bar: {
           horizontal: false,
           columnWidth: "39%",
-          borderRadius: 8,
+          borderRadius: 6,
           borderRadiusApplication: 'end',
         },
       },
@@ -108,7 +110,7 @@ export default function BarChart({
   return (
     <div className="max-w-full overflow-x-auto custom-scrollbar">
       <div className="-ml-5 min-w-162.5 xl:min-w-full pl-2">
-        <Chart options={options} series={series} type="bar" height={180} width="100%" />
+        <Chart options={options} series={series} type="bar" height={height} width="100%" />
       </div>
     </div>
   );

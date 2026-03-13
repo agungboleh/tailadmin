@@ -2,7 +2,7 @@
 
 import { BsXLg } from "react-icons/bs";
 import Link from "next/link";
-import ViewAllNotificationButton from "../buttons/ViewAllNotification";
+import ButtonBasic from "../buttons/ButtonBasic";
 
 interface NotificationItem {
     name: string;
@@ -89,8 +89,10 @@ export default function DropdownNotification({
                     </div>);
             })}
             </div>
-            <div className="mx-5 pb-5 border-t border-gray-200 dark:border-gray-700">
-                <ViewAllNotificationButton />
+            <div className="mx-5 border-t border-gray-200 dark:border-gray-700">
+                <div className="flex justify-center my-4">
+                    <ButtonBasic name={"View All Notifications"} type="button" link={"/chat"} className="cursor-pointer w-full py-2 border border-gray-200 dark:border-gray-700 rounded-lg font-medium text-sm transition-colors bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-white" />
+                </div>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import CardsChartType2 from "@/app/components/cards/charts/ChartsType-2";
 import CardsChartType3 from "@/app/components/cards/charts/ChartsType-3";
 import CardsIconType1 from "@/app/components/cards/icons/IconsType-1";
 import { BsBoxSeam, BsPeople } from "react-icons/bs";
-import MapsIconType1 from "@/app/components/cards/maps/MapsType-1";
+import CardsMapsType1 from "@/app/components/cards/maps/MapsType-1";
 import CardsTablesType1 from "@/app/components/cards/tables/TablesType-1";
 
 export default function EcommercePage() {
@@ -24,7 +24,7 @@ export default function EcommercePage() {
           <CardsChartType3 />
         </div>
         <div className="xl:col-span-6 col-span-14">
-          <MapsIconType1 />
+          <CardsMapsType1 />
         </div>
         <div className="xl:col-span-8 col-span-14">
           <CardsTablesType1 />

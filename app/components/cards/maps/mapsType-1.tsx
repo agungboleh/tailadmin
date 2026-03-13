@@ -2,7 +2,7 @@ import ActionButton from "@/app/components/buttons/Action";
 import CountryMap from "@/app/components/maps/CountryMap";
 import ProgressBarOutsideLabel from "@/app/components/progress-bar/OutsideLabel";
 
-export default function MapsIconType1() {
+export default function CardsMapsType1() {
     return (
         <div className="rounded-xl border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-white/3">
             <div className="rounded-xl p-6 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">

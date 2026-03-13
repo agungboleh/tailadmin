@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { BsChevronDown, BsThreeDotsVertical } from "react-icons/bs";
+import { BsThreeDotsVertical } from "react-icons/bs";
 import { useCloseClickOut } from "../function/CloseClickOut";
 import Link from "next/link";
 

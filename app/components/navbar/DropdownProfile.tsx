@@ -1,7 +1,5 @@
-import AccountSettingsButton from "../buttons/AccountSettings";
-import EditProfileButton from "../buttons/EditProfile";
-import SignOutButton from "../buttons/SignOut";
-import SupportButton from "../buttons/Support";
+import { BsBoxArrowLeft, BsGear, BsPerson, BsQuestionCircle } from "react-icons/bs";
+import ButtonLeftIcon from "../buttons/ButtonLeftIcon";
 
 interface DropdownProfileProps {
     isOpen: boolean;
@@ -20,12 +18,12 @@ export default function DropdownProfile({ isOpen,
                         <div className="text-xs text-gray-500 dark:text-gray-400">agung.bayu.saputro@email.com</div>
                     </div>
                     <div className="py-3 gap-2 flex flex-col border-y border-gray-200 dark:border-gray-700">
-                        <EditProfileButton />
-                        <AccountSettingsButton />
-                        <SupportButton />
+                        <ButtonLeftIcon icon={<BsPerson size={20} />} name={"Edit Profile"} type="button" link={"/profile"} classbutton="cursor-pointer w-full py-2 rounded-lg font-medium text-sm transition-colors bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200 hover:text-gray-800 hover:dark:text-white" classcontent="flex items-center gap-2.5 mx-5" />
+                        <ButtonLeftIcon icon={<BsGear size={20} />} name={"Account Settings"} type="button" link={"/account-settings"} classbutton="cursor-pointer w-full py-2 rounded-lg font-medium text-sm transition-colors bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200 hover:text-gray-800 hover:dark:text-white" classcontent="flex items-center gap-2.5 mx-5" />
+                        <ButtonLeftIcon icon={<BsQuestionCircle size={20} />} name={"Support"} type="button" link={"/support"} classbutton="cursor-pointer w-full py-2 rounded-lg font-medium text-sm transition-colors bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200 hover:text-gray-800 hover:dark:text-white" classcontent="flex items-center gap-2.5 mx-5" />
                     </div>
                     <div>
-                        <SignOutButton />
+                        <ButtonLeftIcon icon={<BsBoxArrowLeft size={20} />} name={"Sign Out"} type="button" link={"/sign-in"} classbutton="cursor-pointer w-full py-2 rounded-lg font-medium text-sm transition-colors bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-200 hover:text-gray-800 hover:dark:text-white" classcontent="flex items-center gap-2.5 mx-5" />
                     </div>
                 </div>
             </div>
