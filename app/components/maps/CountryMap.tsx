@@ -8,7 +8,16 @@ const VectorMap = dynamic(
     { ssr: false }
 );
 
-export default function CountryMap() {
+export type MarkerCountry = {
+    latLng: [number, number];
+    name: string;
+};
+
+interface MarkersCountryProps {
+    markers: MarkerCountry[];
+}
+
+export default function CountryMap({ markers }: MarkersCountryProps) {
     const [worldMap, setWorldMap] = useState<any>(null);
 
     useEffect(() => {
@@ -41,12 +50,7 @@ export default function CountryMap() {
                     },
                 },
                 markersSelectable: true,
-                markers: [
-                    { latLng: [39.16422123767983, -100.55452363548605], name: "United States" },
-                    { latLng: [22.856111062706418, 79.54090995432662], name: "India" },
-                    { latLng: [54.686112218050475, -1.4189227539365874], name: "United Kingdom" },
-                    { latLng: [64.78199706857093, 16.361525924710115], name: "Sweden" },
-                ],
+                markers,
 
                 regionStyle: {
                     initial: {

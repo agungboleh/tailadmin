@@ -18,8 +18,8 @@ const tableData = [
 
 export default function CardsTablesType2({ title }: CardsTablesType2Props) {
     return (
-        <div className="rounded-xl border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-white/3">
-            <div className="rounded-xl p-6 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">
+        <div>
+            <div className="rounded-xl p-6 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
                 <div className="flex justify-between items-center">
                     <p className="font-semibold text-lg">{title}</p>
                     <ActionButton />

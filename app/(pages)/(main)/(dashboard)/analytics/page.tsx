@@ -1,7 +1,7 @@
 import CardsTablesType1 from "@/app/components/cards/tables/TablesType-1";
 import CardsBasicType1 from "@/app/components/cards/basics/BasicsType-1";
 import CardsChartType4 from "@/app/components/cards/charts/ChartsType-4";
-import CardsMapsType1 from "@/app/components/cards/maps/MapsType-1";
+import CardsMapsType1 from "@/app/components/cards/maps/MapsCountry";
 import CardsTablesType2 from "@/app/components/cards/tables/TablesType-2";
 import CardsTablesType3 from "@/app/components/cards/tables/TablesType-3";
 
