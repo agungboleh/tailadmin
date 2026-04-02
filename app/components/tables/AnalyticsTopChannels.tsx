@@ -1,44 +1,61 @@
 import { Table, TableHeader, TableRow, TableCell, TableBody } from "../ui/table/InterfaceTable";
 
-interface List {
+interface DataLists {
     id: number;
     source: string;
-    value: string;
+    visitors: string;
 }
 
-interface AnalyticsTable1Props {
-    headers: string[];
-    data: List[];
-}
+const tableData: DataLists[] = [
+    {
+        id: 1,
+        source: "Google",
+        visitors: "4.7K",
+    },
+    {
+        id: 2,
+        source: "Google",
+        visitors: "4.7K",
+    },
+    {
+        id: 3,
+        source: "Google",
+        visitors: "4.7K",
+    },
+    {
+        id: 4,
+        source: "Google",
+        visitors: "4.7K",
+    },
+];
 
-export default function AnalyticsTable1({ headers, data }: AnalyticsTable1Props) {
+export default function AnalyticsTopChannels() {
     return (
         <div className="max-w-full overflow-x-auto">
             <Table>
-                <TableHeader className="border-gray-100 dark:border-gray-700 border-y">
+                <TableHeader className="border-gray-100 dark:border-gray-800 border-y">
                     <TableRow>
                         <TableCell isHeader className="py-3 font-medium text-gray-700 text-start text-sm dark:text-gray-300">
-                            {headers[0]}
+                            Source
                         </TableCell>
                         <TableCell isHeader className="py-3 font-medium text-gray-700 text-end text-sm dark:text-gray-300">
-                            {headers[1]}
+                            Visitors
                         </TableCell>
                     </TableRow>
                 </TableHeader>
-
-                <TableBody className="divide-y divide-gray-100 dark:divide-gray-700">
-                    {data.map((item) => (
-                        <TableRow key={item.id}>
+                <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
+                    {tableData.map((DataLists) => (
+                        <TableRow key={DataLists.id}>
                             <TableCell className="py-3 text-gray-500 text-sm dark:text-gray-400 text-start">
-                                {item.source}
+                                {DataLists.source}
                             </TableCell>
                             <TableCell className="py-3 text-gray-500 text-sm dark:text-gray-400 text-end">
-                                {item.value}
+                                {DataLists.visitors}
                             </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
             </Table>
         </div>
-    );
+    )
 }

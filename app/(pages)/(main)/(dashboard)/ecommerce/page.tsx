@@ -1,10 +1,17 @@
 import CardsIconLeft from "@/app/components/cards/icons/IconsLeft";
-import { BsBoxSeam, BsPeople } from "react-icons/bs";
-import CardsTablesType1 from "@/app/components/cards/tables/TablesType-1";
+import { BsBoxSeam, BsPeople, BsSliders } from "react-icons/bs";
 import CardsChartBar from "@/app/components/cards/charts/ChartBar";
-import CardsChartRadialBar from "@/app/components/cards/charts/ChartsRadialBar";
+import CardsChartRadialBar from "@/app/components/cards/charts/ChartRadialBar";
 import CardsChartSplineArea from "@/app/components/cards/charts/ChartSplineArea";
 import CardsMapsCountry from "@/app/components/cards/maps/MapsCountry";
+import CardTablelist from "@/app/components/cards/tables/Tablelist";
+import EcommerceRecentOrders from "@/app/components/tables/EcommerceRecentOrders";
+import ActionButton from "@/app/components/buttons/Action";
+import TimePeriodTab from "@/app/components/tabs/TimePeriodTab";
+import RangeCalendar from "@/app/components/date-time-picker/RangeCalendar";
+import ButtonLeftIcon from "@/app/components/buttons/ButtonLeftIcon";
+import ButtonBasic from "@/app/components/buttons/ButtonBasic";
+import SectionHeaderCard from "@/app/components/cards/section/SectionHeaderCard";
 
 export default function EcommercePage() {
   return (
@@ -26,15 +33,25 @@ export default function EcommercePage() {
               TrendType="down" />
           </div>
           <CardsChartBar
-            title={"Monthly Sales"}
+            header={
+              <SectionHeaderCard
+                title={"Monthly Sales"}
+                simple
+                rightContent={<ActionButton />}
+              />}
             categories={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]}
             data={[168, 385, 201, 298, 187, 195, 291, 110, 215, 390, 280, 112]}
-            heightchart={180} />
+            heightchart={180}
+          />
         </div>
         <div className="xl:col-span-6 col-span-14">
           <CardsChartRadialBar
-            title="Monthly Target"
-            caption="Target you've set for each month"
+            header={
+              <SectionHeaderCard
+                title={"Monthly Target"}
+                caption={"Target you've set for each month"}
+                rightContent={<ActionButton />}
+              />}
             value={[75.55]}
             percentage="10%"
             trendtype="plus"
@@ -47,16 +64,29 @@ export default function EcommercePage() {
         </div>
         <div className="flex flex-col col-span-14">
           <CardsChartSplineArea
-            title={"Statistics"}
-            caption={"Target you've set for each month"}
+            header={
+              <SectionHeaderCard
+                title={"Statistics"}
+                caption={"Target you've set for each month"}
+                rightContent={
+                  <>
+                    <TimePeriodTab />
+                    <RangeCalendar />
+                  </>
+                }
+              />}
             categories={["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]}
             first_data={[180, 190, 170, 160, 175, 165, 170, 205, 230, 210, 240, 235]}
             second_data={[40, 30, 50, 40, 55, 40, 70, 100, 110, 120, 150, 140]} />
         </div>
         <div className="xl:col-span-6 col-span-14">
           <CardsMapsCountry
-            title={"Customers Demographic"}
-            caption={"Number of customer based on country"}
+            header={
+              <SectionHeaderCard
+                title={"Customers Demographic"}
+                caption={"Number of customer based on country"}
+                rightContent={<ActionButton />}
+              />}
             markers={[
               { latLng: [39.16422123767983, -100.55452363548605], name: "United States" },
               { latLng: [22.856111062706418, 79.54090995432662], name: "India" },
@@ -79,7 +109,18 @@ export default function EcommercePage() {
             ]} />
         </div>
         <div className="xl:col-span-8 col-span-14">
-          <CardsTablesType1 />
+          <CardTablelist
+            header={<SectionHeaderCard
+              className="items-center"
+              title={"Recent Orders"}
+              rightContent={
+                <>
+                  <ButtonLeftIcon icon={<BsSliders size={16} />} name={"Filter"} type="button" classbutton="cursor-pointer rounded-lg px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/3 dark:hover:text-gray-200" classcontent="flex items-center gap-2 mx-3" />
+                  <ButtonBasic name={"See All"} type="button" link="" className="cursor-pointer rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/3 dark:hover:text-gray-200" />
+                </>
+              }
+            />} content={<EcommerceRecentOrders />}>
+          </CardTablelist>
         </div>
       </div>
     </section>

@@ -80,7 +80,7 @@ const tableData: Product[] = [
     },
 ];
 
-export default function EcommerceTable() {
+export default function EcommerceRecentOrders() {
     return (
         <div className="max-w-full overflow-x-auto">
             <Table>
@@ -102,7 +102,7 @@ export default function EcommerceTable() {
                 </TableHeader>
                 <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
                     {tableData.map((product) => (
-                        <TableRow key={product.id} className="">
+                        <TableRow key={product.id}>
                             <TableCell className="py-3">
                                 <div className="flex items-center gap-3">
                                     <div className="h-12.5 w-12.5 overflow-hidden rounded-md">

@@ -1,4 +1,3 @@
-import ActionButton from "@/app/components/buttons/Action";
 import CountryMap, { MarkerCountry } from "@/app/components/maps/CountryMap";
 import ProgressBarOutsideLabel from "@/app/components/progress-bar/OutsideLabel";
 
@@ -10,9 +9,7 @@ export type CountryStat = {
 };
 
 interface CardsMapsCountryProps {
-    title: string
-    caption: string
-
+    header: React.ReactNode;
 }
 
 interface MarkerCountryProps {
@@ -24,15 +21,11 @@ interface CountryStatProps {
 }
 type Props = CardsMapsCountryProps & MarkerCountryProps & CountryStatProps
 
-export default function CardsMapsCountry({ title, caption, markers, countries }: Props) {
+export default function CardsMapsCountry({ header, markers, countries }: Props) {
     return (
         <div className="rounded-xl border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-white/3">
             <div className="rounded-xl p-6 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">
-                <div className="flex justify-between">
-                    <p className="font-semibold text-lg">{title}</p>
-                    <ActionButton />
-                </div>
-                <p className="text-sm text-gray-500">{caption}</p>
+                {header}
                 <div className="relative">
                     <div className="flex justify-center px-4 py-6 my-6 overflow-hidden border border-gray-200 rounded-2xl dark:border-gray-700 sm:px-6">
                         <div id="mapOne" className="mapOne map-btn -mx-4 -my-6 h-53 w-63 2xsm:w-[307px] xsm:w-[358px] sm:-mx-6 md:w-167 lg:w-158.5 xl:w-98.25 2xl:w-138.5">

@@ -13,7 +13,7 @@ export default function RangeCalendar() {
     const fpRef = useRef<any>(null);
 
     return (
-        <div className="relative inline-block lg:mt-0 mt-2.5">
+        <div className="relative inline-block">
             <BsCalendar4 className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-200" />
             <Flatpickr
                 ref={fpRef}

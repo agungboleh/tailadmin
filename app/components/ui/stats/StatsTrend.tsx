@@ -17,13 +17,13 @@ const trendIcons = {
     down: <BsArrowDown size={16} className="text-red-500" />,
 };
 
-const StatsTrend: React.FC<StatsTrendProps> = ({ items }) => {
+export default function StatsTrend({ items }: StatsTrendProps) {
     return (
         <div className="flex items-center justify-center gap-5 px-6 py-3 sm:gap-8 sm:py-6">
             {items.map((item, index) => (
                 <div key={index} className="flex items-center gap-5 sm:gap-8">
                     <div>
-                        <p className="mb-1 text-center text-gray-500 text-theme-xs dark:text-gray-400 sm:text-sm">
+                        <p className="mb-1 text-center text-gray-500 text-xs dark:text-gray-400 sm:text-sm">
                             {item.label}
                         </p>
                         <p className="flex items-center justify-center gap-1 text-base font-semibold text-gray-800 dark:text-white/90 sm:text-lg">
@@ -39,5 +39,3 @@ const StatsTrend: React.FC<StatsTrendProps> = ({ items }) => {
         </div>
     );
 };
-
-export default StatsTrend;

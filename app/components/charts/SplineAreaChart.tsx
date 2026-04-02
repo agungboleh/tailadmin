@@ -8,17 +8,17 @@ const Chart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
-interface SplineAreaChartsProps {
+interface SplineAreaChartProps {
   categories: string[];
   first_data: number[];
   second_data: number[];
 }
 
-export default function SplineAreaCharts({
+export default function SplineAreaChart({
   categories,
   first_data,
   second_data,
-}: SplineAreaChartsProps) {
+}: SplineAreaChartProps) {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {

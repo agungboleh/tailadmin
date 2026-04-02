@@ -5,15 +5,15 @@ const trendConfig = {
 
 type Trend = "up" | "down";
 
-interface CardsBasicType1Props {
+interface CardsBasicPercentProps {
     title: string;
     value: string;
     percentage: string;
     trend: Trend;
-    text: string;
+    caption: string;
 }
 
-export default function CardsBasicType1({ title, value, percentage, trend, text }: CardsBasicType1Props) {
+export default function CardsBasicPercent({ title, value, percentage, trend, caption }: CardsBasicPercentProps) {
     const { icon: trendIcon, className } = trendConfig[trend];
     return (
         <div className="border rounded-xl p-6 border-gray-200 dark:border-gray-700 bg-white dark:bg-white/5 text-gray-500 dark:text-gray-400">
@@ -22,7 +22,7 @@ export default function CardsBasicType1({ title, value, percentage, trend, text 
                 <div className="text-2xl font-bold text-gray-700 dark:text-white">{value}</div>
                 <div className={`flex items-center p-2 rounded-full text-sm ${className}`}>{trendIcon}<span className="pl-1">{percentage}</span></div>
             </div>
-            <div className="text-xs">{text}</div>
+            <div className="text-xs">{caption}</div>
         </div>
     );
 }

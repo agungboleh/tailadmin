@@ -2,7 +2,7 @@
 import Link from "next/link";
 import ThemeModeButton from "@/app/components/buttons/ThemeMode";
 import HalfCover from "@/app/components/background/HalfCover";
-import SendResetLinkButton from "@/app/components/buttons/SendResetLink";
+import ButtonBasic from "@/app/components/buttons/ButtonBasic";
 
 export default function SigninPage() {
    return (
@@ -24,7 +24,7 @@ export default function SigninPage() {
                 placeholder="Enter your email"
                 className="w-full p-2.5 mb-3 border rounded-lg focus:outline-none placeholder:text-gray-400 dark:placeholder:text-gray-700 border-neutral-300 focus:ring-2 focus:border-blue-500 focus:ring-blue-50  dark:focus:ring-blue-950"
               />
-              <SendResetLinkButton />
+              <ButtonBasic name={"Send Reset Link"} type="submit" link="" className="cursor-pointer mt-5 w-full bg-blue-500 hover:bg-blue-700 py-2.5 rounded-lg font-semibold transition-colors text-neutral-100" />
               <div className="flex items-center justify-between py-5 flex-wrap gap-3">
                 <label className="flex items-center space-x-3 group cursor-pointer">
                   <span className="block text-sm">Wait, I remember my password...</span>

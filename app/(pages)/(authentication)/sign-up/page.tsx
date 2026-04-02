@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { BsCheckLg, BsEye, BsEyeSlash } from "react-icons/bs";
 import Link from "next/link";
-import SignInButton from "@/app/components/buttons/SignIn";
 import ThemeModeButton from "@/app/components/buttons/ThemeMode";
 import HalfCover from "@/app/components/background/HalfCover";
+import ButtonBasic from "@/app/components/buttons/ButtonBasic";
 
 export default function SignUpPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -65,7 +65,7 @@ export default function SignUpPage() {
                   Forgot password?
                 </Link>
               </div>
-              <SignInButton />
+              <ButtonBasic name={"Sign Up"} type="submit" link="" className="cursor-pointer mt-5 w-full bg-blue-500 hover:bg-blue-700 py-2.5 rounded-lg font-semibold transition-colors text-neutral-100" />
             </form>
           </div>
           <ThemeModeButton />
