@@ -1,3 +1,5 @@
+import TrendBadge from "../../ui/badge/TrendBadge";
+
 interface SectionHeaderProps {
     title: string;
     caption?: string;

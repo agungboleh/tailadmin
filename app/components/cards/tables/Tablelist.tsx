@@ -1,6 +1,3 @@
-import { BsArrowRight } from "react-icons/bs";
-import ButtonRightIcon from "../../buttons/ButtonRightIcon";
-
 interface CardTablelistProps {
     header: React.ReactNode;
     content: React.ReactNode;

@@ -1,6 +1,6 @@
 import { BsArrowUpShort, BsArrowDownShort } from "react-icons/bs";
 
-type TrendVariant = "light" | "solid";
+type TrendVariant = "lightnb" | "light" | "solid";
 
 export type TrendType =
     | "up"
@@ -23,6 +23,12 @@ const trendIcons = {
 };
 
 const variants = {
+    lightnb: {
+        up: "text-green-600 dark:text-green-400",
+        plus: "text-green-600 dark:text-green-400",
+        down: "text-red-600 dark:text-red-400",
+        minus: "text-red-600 dark:text-red-400",
+    },
     light: {
         up: "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400",
         plus: "bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400",

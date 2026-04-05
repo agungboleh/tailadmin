@@ -11,11 +11,13 @@ const Chart = dynamic(() => import("react-apexcharts"), {
 interface BasicAreaChartProps {
   categories: string[];
   data: number[];
+  height?: number;
 }
 
 export default function BasicAreaChart({
   categories,
   data,
+  height = 140,
 }: BasicAreaChartProps) {
   const [isDark, setIsDark] = useState(false);
 
@@ -84,7 +86,7 @@ export default function BasicAreaChart({
   return (
     <div className="my-5 min-h-38.75 rounded-xl bg-gray-50 dark:bg-gray-900">
       <div className="h-full">
-        <Chart options={options} series={series} type="area" height={140} width="100%" />
+        <Chart options={options} series={series} type="area" height={height} width="100%" />
       </div>
     </div>
   );

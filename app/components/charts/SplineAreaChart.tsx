@@ -65,7 +65,7 @@ export default function SplineAreaChart({
       background: "transparent",
     },
     stroke: {
-      curve: "straight",
+      curve: "smooth",
       width: [2, 2],
     },
 

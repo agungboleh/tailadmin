@@ -14,7 +14,7 @@ interface CardsIconleftProps {
     TrendType: TrendType;
 }
 
-export default function CardsIconLeft({ icon, title, value, percentage, TrendType }: CardsIconleftProps) {
+export default function CardsIconLeft_1({ icon, title, value, percentage, TrendType }: CardsIconleftProps) {
 
     return (
         <div className="border rounded-xl p-6 border-gray-200 dark:border-gray-700 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">

@@ -1,4 +1,3 @@
-import CardsIconLeft from "@/app/components/cards/icons/IconsLeft";
 import { BsBoxSeam, BsPeople, BsSliders } from "react-icons/bs";
 import CardsChartBar from "@/app/components/cards/charts/ChartBar";
 import CardsChartRadialBar from "@/app/components/cards/charts/ChartRadialBar";
@@ -12,6 +11,7 @@ import RangeCalendar from "@/app/components/date-time-picker/RangeCalendar";
 import ButtonLeftIcon from "@/app/components/buttons/ButtonLeftIcon";
 import ButtonBasic from "@/app/components/buttons/ButtonBasic";
 import SectionHeaderCard from "@/app/components/cards/section/SectionHeaderCard";
+import CardsIconLeft_1 from "@/app/components/cards/icons/IconsLeft-1";
 
 export default function EcommercePage() {
   return (
@@ -19,13 +19,13 @@ export default function EcommercePage() {
       <div className="grid grid-cols-14 gap-6">
         <div className="flex flex-col xl:col-span-8 col-span-14 gap-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <CardsIconLeft
+            <CardsIconLeft_1
               icon={<BsPeople size={20} />}
               title="Customers"
               value="3,782"
               percentage="11.01%"
               TrendType="up" />
-            <CardsIconLeft
+            <CardsIconLeft_1
               icon={<BsBoxSeam size={20} />}
               title="Orders"
               value="5,359"
@@ -113,13 +113,11 @@ export default function EcommercePage() {
             header={<SectionHeaderCard
               className="items-center"
               title={"Recent Orders"}
-              rightContent={
-                <>
-                  <ButtonLeftIcon icon={<BsSliders size={16} />} name={"Filter"} type="button" classbutton="cursor-pointer rounded-lg px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/3 dark:hover:text-gray-200" classcontent="flex items-center gap-2 mx-3" />
-                  <ButtonBasic name={"See All"} type="button" link="" className="cursor-pointer rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/3 dark:hover:text-gray-200" />
-                </>
-              }
-            />} content={<EcommerceRecentOrders />}>
+              rightContent={<>
+                <ButtonLeftIcon icon={<BsSliders size={16} />} name={"Filter"} type="button" classbutton="cursor-pointer rounded-lg px-2 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/3 dark:hover:text-gray-200" classcontent="flex items-center gap-2 mx-3" />
+                <ButtonBasic name={"See All"} type="button" link="" className="cursor-pointer rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-xs hover:bg-gray-50 hover:text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-white/3 dark:hover:text-gray-200" />
+              </>} />}
+            content={<EcommerceRecentOrders />}>
           </CardTablelist>
         </div>
       </div>

@@ -70,8 +70,8 @@ const tableData: Product[] = [
 
 export default function AnalyticsRecentOrders() {
     return (
-        <div className="max-w-full overflow-x-auto">
-            <Table>
+        <div className="w-full overflow-x-auto">
+            <Table className="min-w-max w-full">
                 <TableHeader className="border-gray-100 dark:border-gray-800 border-y">
                     <TableRow>
                         <TableCell isHeader className="py-3 font-medium text-gray-500 text-start text-xs dark:text-gray-400">

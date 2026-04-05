@@ -82,20 +82,20 @@ const tableData: Product[] = [
 
 export default function EcommerceRecentOrders() {
     return (
-        <div className="max-w-full overflow-x-auto">
-            <Table>
+        <div className="w-full overflow-x-auto">
+            <Table className="min-w-max w-full">
                 <TableHeader className="border-gray-100 dark:border-gray-800 border-y">
                     <TableRow>
-                        <TableCell isHeader className="py-3 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
+                        <TableCell isHeader className="py-3 px-5 sm:px-0 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
                             Products
                         </TableCell>
-                        <TableCell isHeader className="py-3 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
+                        <TableCell isHeader className="py-3 px-5 sm:px-0 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
                             Category
                         </TableCell>
-                        <TableCell isHeader className="py-3 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
+                        <TableCell isHeader className="py-3 px-5 sm:px-0 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
                             Price
                         </TableCell>
-                        <TableCell isHeader className="py-3 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
+                        <TableCell isHeader className="py-3 px-5 sm:px-0 font-medium text-gray-500 text-start text-xs dark:text-gray-400">
                             Status
                         </TableCell>
                     </TableRow>
@@ -103,7 +103,7 @@ export default function EcommerceRecentOrders() {
                 <TableBody className="divide-y divide-gray-100 dark:divide-gray-800">
                     {tableData.map((product) => (
                         <TableRow key={product.id}>
-                            <TableCell className="py-3">
+                            <TableCell className="py-3 px-5 sm:px-0">
                                 <div className="flex items-center gap-3">
                                     <div className="h-12.5 w-12.5 overflow-hidden rounded-md">
                                         <img src={product.image} className="h-12.5 w-12.5" alt={product.name} />
@@ -118,13 +118,13 @@ export default function EcommerceRecentOrders() {
                                     </div>
                                 </div>
                             </TableCell>
-                            <TableCell className="py-3 text-gray-500 text-sm dark:text-gray-400">
+                            <TableCell className="py-3 px-5 sm:px-0 text-gray-500 text-sm dark:text-gray-400">
                                 {product.category}
                             </TableCell>
-                            <TableCell className="py-3 text-gray-500 text-sm dark:text-gray-400">
+                            <TableCell className="py-3 px-5 sm:px-0 text-gray-500 text-sm dark:text-gray-400">
                                 {product.price}
                             </TableCell>
-                            <TableCell className="py-3 text-gray-500 text-sm dark:text-gray-400">
+                            <TableCell className="py-3 px-5 sm:px-0 text-gray-500 text-sm dark:text-gray-400">
                                 <Badge size="sm" variant="light" color={statusColorMap[product.status]}>
                                     {product.status}
                                 </Badge>
