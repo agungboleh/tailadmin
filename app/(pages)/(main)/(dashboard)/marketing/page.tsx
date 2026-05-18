@@ -2,13 +2,13 @@ import ActionButton from "@/app/components/buttons/Action";
 import ButtonBasic from "@/app/components/buttons/ButtonBasic";
 import CardsChartSplineArea from "@/app/components/cards/charts/ChartSplineArea";
 import CardsIconLeft_2 from "@/app/components/cards/icons/IconsLeft-2";
-import HeaderRightContent from "@/app/components/cards/section/HeaderRightContent";
 import SectionHeaderCard from "@/app/components/cards/section/SectionHeaderCard";
 import CardTablelist from "@/app/components/cards/tables/Tablelist";
 import MarketingFeaturedCampaigns from "@/app/components/tables/MarketingFeaturedCampaigns";
 import MarketingTopTrafficSource from "@/app/components/tables/MarketingTopTrafficSource";
 import MarketingTrafficStats from "@/app/components/tables/MarketingTrafficStats";
 import TimePeriodTab from "@/app/components/tabs/TimePeriodTab";
+import StatsSummary from "@/app/components/ui/stats/StatsSummary";
 import { BsCurrencyDollar, BsPeople, BsStar } from "react-icons/bs";
 
 export default function MarketingPage() {
@@ -49,7 +49,7 @@ export default function MarketingPage() {
                 title={"Impression & Data Traffic"}
                 caption={"Jun 1, 2024 - Dec 1, 2025"}
                 rightContent={
-                  <HeaderRightContent
+                  <StatsSummary
                     value="$9,758.00"
                     percentage="7.96%"
                     TrendType="plus"

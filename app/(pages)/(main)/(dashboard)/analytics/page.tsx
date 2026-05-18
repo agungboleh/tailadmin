@@ -2,7 +2,7 @@ import ActionButton from "@/app/components/buttons/Action";
 import ButtonBasic from "@/app/components/buttons/ButtonBasic";
 import ButtonLeftIcon from "@/app/components/buttons/ButtonLeftIcon";
 import ButtonRightIcon from "@/app/components/buttons/ButtonRightIcon";
-import CardsBasicPercent from "@/app/components/cards/basics/CardsBasicPercent";
+import CardsBasicPercent_1 from "@/app/components/cards/basics/CardsBasicPercent-1";
 import CardsChartBar from "@/app/components/cards/charts/ChartBar";
 import CardsChartBasicArea from "@/app/components/cards/charts/ChartBasicArea";
 import ChartPieDonut from "@/app/components/cards/charts/ChartPieDonut";
@@ -23,7 +23,7 @@ export default function AnalyticsPage() {
     <section className="min-h-screen">
       <div className="grid grid-cols-12 gap-6 mb-6">
         <div className="col-span-12 sm:col-span-6 xl:col-span-3">
-          <CardsBasicPercent
+          <CardsBasicPercent_1
             title={"Unique Visitors"}
             value={"24.7K"}
             percentage={"20%"}
@@ -31,7 +31,7 @@ export default function AnalyticsPage() {
             caption={"Vs last month"} />
         </div>
         <div className="col-span-12 sm:col-span-6 xl:col-span-3">
-          <CardsBasicPercent
+          <CardsBasicPercent_1
             title={"Total Pageviews"}
             value={"55.9K"}
             percentage={"4%"}
@@ -39,7 +39,7 @@ export default function AnalyticsPage() {
             caption={"Vs last month"} />
         </div>
         <div className="col-span-12 sm:col-span-6 xl:col-span-3">
-          <CardsBasicPercent
+          <CardsBasicPercent_1
             title={"Bounce Rate"}
             value={"54%"}
             percentage={"1.59%"}
@@ -47,7 +47,7 @@ export default function AnalyticsPage() {
             caption={"Vs last month"} />
         </div>
         <div className="col-span-12 sm:col-span-6 xl:col-span-3">
-          <CardsBasicPercent
+          <CardsBasicPercent_1
             title={"Visit Duration"}
             value={"2m 56s"}
             percentage={"7%"}

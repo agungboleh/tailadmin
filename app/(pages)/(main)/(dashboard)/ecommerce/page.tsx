@@ -53,6 +53,7 @@ export default function EcommercePage() {
                 rightContent={<ActionButton />}
               />}
             value={[75.55]}
+            suffix="%"
             percentage="10%"
             trendtype="plus"
             content="You earn $3287 today, it's higher than last month. Keep up your good work!"

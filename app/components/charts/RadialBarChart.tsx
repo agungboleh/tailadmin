@@ -10,9 +10,12 @@ const Chart = dynamic(() => import("react-apexcharts"), {
 
 interface RadialBarChartProps {
   data: number[];
+  prefix?: string;
+  suffix?: string; 
 }
 
-export default function RadialBarChart({ data }: RadialBarChartProps) {
+export default function RadialBarChart({ data, prefix = "", 
+  suffix = "", }: RadialBarChartProps) {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
@@ -62,7 +65,8 @@ export default function RadialBarChart({ data }: RadialBarChartProps) {
               fontWeight: "600",
               offsetY: -40,
               color: isDark ? "#FFFFFF" : "#1D2939",
-              formatter: (val: number) => `${val}%`,
+              formatter: (val: number) =>
+              `${prefix ?? ""}${val}${suffix ?? ""}`,
             },
           },
         },
@@ -79,7 +83,7 @@ export default function RadialBarChart({ data }: RadialBarChartProps) {
         mode: isDark ? "dark" : "light",
       },
     }),
-    [isDark]
+    [isDark, prefix, suffix]
   );
 
   return (

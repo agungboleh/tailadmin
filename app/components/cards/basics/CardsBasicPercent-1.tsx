@@ -13,7 +13,7 @@ interface CardsBasicPercentProps {
     caption: string;
 }
 
-export default function CardsBasicPercent({ title, value, percentage, trend, caption }: CardsBasicPercentProps) {
+export default function CardsBasicPercent_1({ title, value, percentage, trend, caption }: CardsBasicPercentProps) {
     const { icon: trendIcon, className } = trendConfig[trend];
     return (
         <div className="border rounded-xl p-6 border-gray-200 dark:border-gray-700 bg-white dark:bg-white/5 text-gray-500 dark:text-gray-400">

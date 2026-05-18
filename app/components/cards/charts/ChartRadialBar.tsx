@@ -20,6 +20,8 @@ interface TrendProps {
 
 interface ChartRadialBarProps {
     value: number[]
+    prefix?: string;
+    suffix?: string;
 }
 
 export type TrendDirection =
@@ -38,13 +40,14 @@ interface StatsProps {
 
 type Props = CardsProps & TrendProps & ChartRadialBarProps & StatsProps
 
-export default function CardsChartRadialBar({ header, content, percentage, trendtype, value, items }: Props) {
+export default function CardsChartRadialBar({ header, content, percentage, trendtype, value, prefix = "", 
+  suffix = "", items }: Props) {
     return (
         <div className="rounded-xl border border-gray-200 bg-gray-100 dark:border-gray-700 dark:bg-white/3">
             <div className="rounded-xl p-6 bg-white dark:bg-white/5 text-gray-700 dark:text-gray-200">
                 {header}
                 <div className="relative">
-                    <RadialBarChart data={value} />
+                    <RadialBarChart prefix={prefix} data={value} suffix={suffix} />
                     <TrendBadge trend={trendtype} variant="light" className="absolute left-1/2 top-full -translate-x-1/2 -translate-y-[95%] rounded-full px-3 py-1 text-xs font-medium">{percentage}</TrendBadge>
                 </div>
                 <p className="mx-auto mt-10 w-full max-w-95 text-center text-sm text-gray-500 sm:text-base">
