@@ -10,7 +10,7 @@ export default function HomePage() {
     if (isLoggedIn) {
       router.push("/ecommerce");
     } else {
-      router.push("/signin");
+      router.push("/ecommerce");
     }
   }, [router]);
 
